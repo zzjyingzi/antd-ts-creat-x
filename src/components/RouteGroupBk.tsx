@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useState, useEffect  } from 'react';
 import {Redirect, useHistory} from 'react-router-dom';
-import {store} from '../index';
+import store from '../store';
 
 export default function RouteGroup ({children, ...rest}: any){
     const auth = true;

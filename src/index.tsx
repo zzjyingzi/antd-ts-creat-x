@@ -16,11 +16,10 @@ import reportWebVitals from './reportWebVitals';
 import "./mock/index.js"
 
 
-const initialStates = {};
-export const store = configureStore(reducers, initialStates);
+import store from "./store";
+
+
 store.runSaga(rootSaga);
-
-
 
 ReactDOM.render(
     <Provider store={store}>

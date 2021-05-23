@@ -27,7 +27,7 @@ export interface user extends person{
 }
 
 
-function App() {
+function App(props: any) {
     const auth = getToken();
     return (
         <div className="App">
