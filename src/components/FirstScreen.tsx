@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { useState, useEffect  } from 'react';
 
-import { getToken } from "../util/manageStorage";
-
-import LoginCom from '../modules/LoginCom';
 import Header from "./Header";
 import {Route, Switch} from "react-router-dom";
 import HomeComponent from "../modules/HomeCom";
@@ -12,9 +9,7 @@ import NoMatch from "../pages/views/NoMatch";
 
 
 
-function alarm(){
-    console.log("onEnter alarm");
-}
+
 
 
 export default function FirstScreen ({children, ...rest}: any){
@@ -23,7 +18,6 @@ export default function FirstScreen ({children, ...rest}: any){
 
     return(
         <Route>
-
             <Route component={Header} />
             <Switch>
                 {/*<Route context={} setState={} forceUpdate={} render={} props={} state={} refs={} />*/}

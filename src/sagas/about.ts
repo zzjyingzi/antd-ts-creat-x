@@ -3,7 +3,7 @@ import {put, takeEvery, take, call, fork, delay, all} from 'redux-saga/effects';
 import getAboutData from '../services/about'
 
 
-function* listAddReflect() {
+function* listAddReflect():Generator<any, void, any> {
   const res = yield call(getAboutData, {});
   yield put({type: 'ABOUTLISTSHOW', data: res.data});
 }

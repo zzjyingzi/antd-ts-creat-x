@@ -1,9 +1,6 @@
 // import * as types from '../actions/actionType';
 
-import {setToken} from "../util/manageStorage";
-
-
-export default (state = {changeLonginStatus: ()=>{}}, action: any)=> {
+export default (state = {userName:'', userId:null}, action: any)=> {
     let user = action.user || {};
     // const newState =  Object.assign({}, state);
     let userClean = {};
@@ -14,7 +11,11 @@ export default (state = {changeLonginStatus: ()=>{}}, action: any)=> {
             };
         case "LOGINSUC":
             return {
-                ...state, ...action
+                ...state, ...action,
+                user: {
+                    userName: action.userName,
+                    userId: action.userId
+                }
             };
         case "LOGOUT":
             return {

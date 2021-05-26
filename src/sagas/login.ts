@@ -4,8 +4,9 @@ import loginData from '../services/login'
 import {setToken} from "../util/manageStorage";
 
 
-function* listAddReflect() {
+function* listAddReflect():Generator<any, void, any>  {
   const res = yield call(loginData, {});
+
   yield put({type: 'LOGINSUC', data: {userName:res.data.authorName, userId:res.data.author}});
 }
 

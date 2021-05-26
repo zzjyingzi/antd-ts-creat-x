@@ -2,7 +2,7 @@ import { put, takeEvery, take, call, fork, delay, all, join } from 'redux-saga/e
 
 import getHomeData from '../services/home'
 
-function* listAddReflect() {
+function* listAddReflect() :Generator<any, void, any>{
   const data = yield call(getHomeData, {});
   yield put({type: 'HOMELISTSHOW', data: data.data});
 }
