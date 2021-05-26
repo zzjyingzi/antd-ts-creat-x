@@ -10,6 +10,7 @@ export default (state = {userName:'', userId:null}, action: any)=> {
                 ...state, ...action, user
             };
         case "LOGINSUC":
+
             return {
                 ...state, ...action,
                 user: {

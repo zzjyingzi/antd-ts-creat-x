@@ -6,7 +6,7 @@ import {setToken} from "../util/manageStorage";
 
 function* listAddReflect():Generator<any, void, any>  {
   const res = yield call(loginData, {});
-
+  setToken(res.data);
   yield put({type: 'LOGINSUC', data: {userName:res.data.authorName, userId:res.data.author}});
 }
 

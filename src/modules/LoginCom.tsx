@@ -55,7 +55,6 @@ function LoginFn(props: any){
         props.login();
     };
 
-
     return (<div className={"login-bg"}>
         <section className={'con'}>
             <Form
